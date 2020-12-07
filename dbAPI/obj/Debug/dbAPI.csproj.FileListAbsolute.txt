@@ -1,0 +1,7 @@
+D:\AUTT_PROJECT\mssDashboard\dbAPI\bin\Debug\dbAPI.dll
+D:\AUTT_PROJECT\mssDashboard\dbAPI\bin\Debug\dbAPI.pdb
+D:\AUTT_PROJECT\mssDashboard\dbAPI\bin\Debug\Newtonsoft.Json.dll
+D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CoreCompileInputs.cache
+D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
+D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.dll
+D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.pdb

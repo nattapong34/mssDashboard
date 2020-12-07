@@ -30,8 +30,8 @@ namespace mssDashboard.control
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbNum = new System.Windows.Forms.Label();
             this.pbPerson = new System.Windows.Forms.PictureBox();
+            this.lbNum = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerson)).BeginInit();
             this.SuspendLayout();
@@ -48,29 +48,29 @@ namespace mssDashboard.control
             this.panel1.Size = new System.Drawing.Size(407, 143);
             this.panel1.TabIndex = 0;
             // 
-            // lbNum
-            // 
-            this.lbNum.BackColor = System.Drawing.Color.Teal;
-            this.lbNum.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNum.ForeColor = System.Drawing.Color.White;
-            this.lbNum.Location = new System.Drawing.Point(0, 0);
-            this.lbNum.Name = "lbNum";
-            this.lbNum.Size = new System.Drawing.Size(283, 141);
-            this.lbNum.TabIndex = 0;
-            this.lbNum.Text = "A999";
-            this.lbNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pbPerson
             // 
             this.pbPerson.BackgroundImage = global::mssDashboard.Properties.Resources.Mask_1_512;
             this.pbPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbPerson.Location = new System.Drawing.Point(283, 0);
+            this.pbPerson.Location = new System.Drawing.Point(243, 0);
             this.pbPerson.Name = "pbPerson";
-            this.pbPerson.Size = new System.Drawing.Size(122, 141);
+            this.pbPerson.Size = new System.Drawing.Size(162, 141);
             this.pbPerson.TabIndex = 1;
             this.pbPerson.TabStop = false;
+            // 
+            // lbNum
+            // 
+            this.lbNum.BackColor = System.Drawing.Color.Teal;
+            this.lbNum.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNum.ForeColor = System.Drawing.Color.White;
+            this.lbNum.Location = new System.Drawing.Point(0, 0);
+            this.lbNum.Name = "lbNum";
+            this.lbNum.Size = new System.Drawing.Size(243, 141);
+            this.lbNum.TabIndex = 0;
+            this.lbNum.Text = "A999";
+            this.lbNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // queueDisplay
             // 

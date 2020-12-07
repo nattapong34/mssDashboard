@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XNW/20Y4Qk5/597+l6Vhr2zt2xBRPm/K7/ER3VuKwF5eTD+kQh5ZGkDnkZprjvTMPn4J+Bpl0Qr1JmOoubXGCg==",
+  "success": true,
+  "projectFilePath": "D:\\AUTT_PROJECT\\mssDashboard\\mssDashboard\\mssDashboard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tom\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
