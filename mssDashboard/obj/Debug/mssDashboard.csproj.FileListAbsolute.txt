@@ -19,3 +19,4 @@ D:\AUTT_PROJECT\mssDashboard\mssDashboard\obj\Debug\mssDashboard.csproj.CoreComp
 D:\AUTT_PROJECT\mssDashboard\mssDashboard\obj\Debug\mssDashboard.csproj.CopyComplete
 D:\AUTT_PROJECT\mssDashboard\mssDashboard\obj\Debug\mssDashboard.exe
 D:\AUTT_PROJECT\mssDashboard\mssDashboard\obj\Debug\mssDashboard.pdb
+D:\AUTT_PROJECT\mssDashboard\mssDashboard\bin\Debug\SimpleTCP.dll

@@ -30,6 +30,7 @@ namespace mssDashboard
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "A01"}, 0, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
@@ -48,11 +49,12 @@ namespace mssDashboard
             "A02"}, 0, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "A03"}, 0, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pbADV = new System.Windows.Forms.Panel();
+            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -89,7 +91,6 @@ namespace mssDashboard
             this.panel10 = new System.Windows.Forms.Panel();
             this.lbClock = new System.Windows.Forms.Label();
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.qd1 = new mssDashboard.control.queueDisplay();
             this.qd2 = new mssDashboard.control.queueDisplay();
             this.queueDisplay8 = new mssDashboard.control.queueDisplay();
@@ -98,6 +99,7 @@ namespace mssDashboard
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pbADV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,7 +122,6 @@ namespace mssDashboard
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -160,9 +161,20 @@ namespace mssDashboard
             this.pbADV.Size = new System.Drawing.Size(651, 716);
             this.pbADV.TabIndex = 2;
             // 
+            // mediaPlayer
+            // 
+            this.mediaPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mediaPlayer.Enabled = true;
+            this.mediaPlayer.Location = new System.Drawing.Point(10, 10);
+            this.mediaPlayer.Name = "mediaPlayer";
+            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
+            this.mediaPlayer.Size = new System.Drawing.Size(631, 696);
+            this.mediaPlayer.TabIndex = 0;
+            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel13.Controls.Add(this.txtStatus);
             this.panel13.Controls.Add(this.label5);
             this.panel13.Controls.Add(this.label4);
             this.panel13.Controls.Add(this.label3);
@@ -172,6 +184,15 @@ namespace mssDashboard
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(651, 100);
             this.panel13.TabIndex = 1;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.txtStatus.Location = new System.Drawing.Point(343, 0);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(308, 100);
+            this.txtStatus.TabIndex = 4;
             // 
             // label5
             // 
@@ -588,16 +609,6 @@ namespace mssDashboard
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // mediaPlayer
-            // 
-            this.mediaPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mediaPlayer.Enabled = true;
-            this.mediaPlayer.Location = new System.Drawing.Point(10, 10);
-            this.mediaPlayer.Name = "mediaPlayer";
-            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
-            this.mediaPlayer.Size = new System.Drawing.Size(631, 696);
-            this.mediaPlayer.TabIndex = 0;
-            // 
             // qd1
             // 
             this.qd1.BackColor = System.Drawing.Color.Black;
@@ -651,15 +662,16 @@ namespace mssDashboard
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel7);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMain";
             this.Text = "Form1";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.pbADV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -683,7 +695,6 @@ namespace mssDashboard
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,6 +746,7 @@ namespace mssDashboard
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }
 

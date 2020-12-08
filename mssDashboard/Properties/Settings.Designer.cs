@@ -82,5 +82,17 @@ namespace mssDashboard.Properties {
                 this["QSTATION3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("9876")]
+        public string SOCKET_PORT {
+            get {
+                return ((string)(this["SOCKET_PORT"]));
+            }
+            set {
+                this["SOCKET_PORT"] = value;
+            }
+        }
     }
 }

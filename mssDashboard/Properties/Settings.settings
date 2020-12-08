@@ -17,5 +17,8 @@
     <Setting Name="QSTATION3" Type="System.String" Scope="User">
       <Value Profile="(Default)">C</Value>
     </Setting>
+    <Setting Name="SOCKET_PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9876</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

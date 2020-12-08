@@ -11,6 +11,15 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "SimpleTCP/1.0.24": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
+        }
+      },
       "dbAPI/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
@@ -33,6 +42,15 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SimpleTCP/1.0.24": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
         }
       },
       "dbAPI/1.0.0": {
@@ -59,6 +77,15 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "SimpleTCP/1.0.24": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
+        }
+      },
       "dbAPI/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
@@ -81,6 +108,15 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SimpleTCP/1.0.24": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
         }
       },
       "dbAPI/1.0.0": {
@@ -130,6 +166,18 @@
         "packageIcon.png"
       ]
     },
+    "SimpleTCP/1.0.24": {
+      "sha512": "mQEKbXruksWRmKeUuID7S+Ltg092EiWXwnomnVYohkY+/rTRiIp4PUTE/bdBEj6oh1gIt0lp4l0GBlwtOhqU5w==",
+      "type": "package",
+      "path": "simpletcp/1.0.24",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleTCP.dll",
+        "simpletcp.1.0.24.nupkg.sha512",
+        "simpletcp.nuspec"
+      ]
+    },
     "dbAPI/1.0.0": {
       "type": "project",
       "path": "../dbAPI/dbAPI.csproj",
@@ -139,6 +187,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5": [
       "Newtonsoft.Json >= 12.0.3",
+      "SimpleTCP >= 1.0.24",
       "dbAPI >= 1.0.0"
     ]
   },
@@ -182,6 +231,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "SimpleTCP": {
+            "target": "Package",
+            "version": "[1.0.24, )"
           }
         }
       }
