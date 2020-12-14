@@ -94,5 +94,17 @@ namespace mssDashboard.Properties {
                 this["SOCKET_PORT"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-- ยินดีต้อนรับ --")]
+        public string CAPTION {
+            get {
+                return ((string)(this["CAPTION"]));
+            }
+            set {
+                this["CAPTION"] = value;
+            }
+        }
     }
 }

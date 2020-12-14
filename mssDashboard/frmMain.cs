@@ -18,10 +18,12 @@ namespace mssDashboard
         api _api;
         List<onQueue> _qq;
         SimpleTcpServer server;
+        history _his;
 
         public frmMain()
         {
             InitializeComponent();
+
         }
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
@@ -67,6 +69,12 @@ namespace mssDashboard
             //    }
             //    fatchDisplay(q);
             //}
+            _his = new history(ref pnHis);
+            _his.addQueue("A1", "2");
+            _his.addQueue("A2", "2");
+            _his.addQueue("B1", "3");
+            _his.addQueue("B1", "3");
+            _his.addQueue("C1", "1");
         }
 
         private void fatchDisplay(JObject q)
@@ -94,6 +102,11 @@ namespace mssDashboard
         {
             if (server.IsStarted)
                 server.Stop();
+        }
+
+        private void mediaPlayer_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

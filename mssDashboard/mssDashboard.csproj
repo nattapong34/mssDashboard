@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\ucHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ucHistory.Designer.cs">
+      <DependentUpon>ucHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\queueDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,8 +63,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="history.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="control\ucHistory.resx">
+      <DependentUpon>ucHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\queueDisplay.resx">
       <DependentUpon>queueDisplay.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +85,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="font\digital_counter_7.ttf" />
+    <None Include="font\digital_counter_7_italic.ttf" />
+    <None Include="font\DS-DIGI.TTF" />
+    <None Include="font\DS-DIGIB.TTF" />
+    <None Include="font\DS-DIGII.TTF" />
+    <None Include="font\DS-DIGIT.TTF" />
+    <None Include="font\FLATPACK.TTF" />
+    <None Include="font\SUBWT___.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

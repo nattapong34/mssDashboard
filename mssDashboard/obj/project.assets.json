@@ -192,20 +192,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ch.nattaponghotmail\\.nuget\\packages\\": {}
+    "C:\\Users\\tom\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\mssDashboard\\mssDashboard.csproj",
+      "projectUniqueName": "D:\\AUTT_PROJECT\\mssDashboard\\mssDashboard\\mssDashboard.csproj",
       "projectName": "mssDashboard",
-      "projectPath": "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\mssDashboard\\mssDashboard.csproj",
-      "packagesPath": "C:\\Users\\ch.nattaponghotmail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\mssDashboard\\obj\\",
+      "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\mssDashboard\\mssDashboard.csproj",
+      "packagesPath": "C:\\Users\\tom\\.nuget\\packages\\",
+      "outputPath": "D:\\AUTT_PROJECT\\mssDashboard\\mssDashboard\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\ch.nattaponghotmail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -218,8 +218,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\dbAPI\\dbAPI.csproj": {
-              "projectPath": "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\dbAPI\\dbAPI.csproj"
+            "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj": {
+              "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj"
             }
           }
         }

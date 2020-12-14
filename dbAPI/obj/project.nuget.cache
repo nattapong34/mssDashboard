@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "e9+WoDv4tdRdmaXCfglPnkd7woyWIw+p+nV+JEZOxIezDlajfrljY0HAHJLuN1spaqo4o60KN+4UsstrDCvDgg==",
+  "dgSpecHash": "9ES4W1fQ1uBSMmGWNlSwuOIJzdlIOvWBrVgjHm1V0BmfgK9Jt8cIZb/4PAm6UyiaS/hKBrUcyWu5umopeNo5rw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ch.nattaponghotmail\\Documents\\mssDashboard\\dbAPI\\dbAPI.csproj",
+  "projectFilePath": "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ch.nattaponghotmail\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\tom\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

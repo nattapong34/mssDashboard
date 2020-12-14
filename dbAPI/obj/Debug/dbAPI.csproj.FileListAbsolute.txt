@@ -5,7 +5,6 @@ D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CoreCompileInputs.cach
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.dll
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.pdb
-D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csprojAssemblyReference.cache
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\bin\Debug\dbAPI.dll
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\bin\Debug\dbAPI.pdb
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\bin\Debug\Newtonsoft.Json.dll

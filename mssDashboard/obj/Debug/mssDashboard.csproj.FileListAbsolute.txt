@@ -42,3 +42,4 @@ C:\Users\ch.nattaponghotmail\Documents\mssDashboard\mssDashboard\obj\Debug\mssDa
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\mssDashboard\obj\Debug\mssDashboard.csproj.CopyComplete
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\mssDashboard\obj\Debug\mssDashboard.exe
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\mssDashboard\obj\Debug\mssDashboard.pdb
+D:\AUTT_PROJECT\mssDashboard\mssDashboard\obj\Debug\mssDashboard.control.ucHistory.resources
