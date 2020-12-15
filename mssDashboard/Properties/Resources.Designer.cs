@@ -63,6 +63,76 @@ namespace mssDashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] digital_counter_7 {
+            get {
+                object obj = ResourceManager.GetObject("digital_counter_7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] digital_counter_7_italic {
+            get {
+                object obj = ResourceManager.GetObject("digital_counter_7_italic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DS_DIGI {
+            get {
+                object obj = ResourceManager.GetObject("DS_DIGI", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DS_DIGIB {
+            get {
+                object obj = ResourceManager.GetObject("DS_DIGIB", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DS_DIGII {
+            get {
+                object obj = ResourceManager.GetObject("DS_DIGII", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DS_DIGIT {
+            get {
+                object obj = ResourceManager.GetObject("DS_DIGIT", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] GAS_____ {
+            get {
+                object obj = ResourceManager.GetObject("GAS_____", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] howto {
             get {
                 object obj = ResourceManager.GetObject("howto", resourceCulture);

@@ -30,8 +30,8 @@ namespace mssDashboard.control
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbNum = new System.Windows.Forms.Label();
-            this.lbGate = new System.Windows.Forms.Label();
+            this.lbCounter = new System.Windows.Forms.Label();
+            this.lbQ = new System.Windows.Forms.Label();
             this.pbPerson = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerson)).BeginInit();
@@ -39,8 +39,8 @@ namespace mssDashboard.control
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lbGate);
-            this.panel1.Controls.Add(this.lbNum);
+            this.panel1.Controls.Add(this.lbCounter);
+            this.panel1.Controls.Add(this.lbQ);
             this.panel1.Controls.Add(this.pbPerson);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -49,28 +49,30 @@ namespace mssDashboard.control
             this.panel1.Size = new System.Drawing.Size(990, 120);
             this.panel1.TabIndex = 0;
             // 
-            // lbNum
+            // lbCounter
             // 
-            this.lbNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
-            this.lbNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbNum.Font = new System.Drawing.Font("DS-Digital", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNum.ForeColor = System.Drawing.Color.Gold;
-            this.lbNum.Location = new System.Drawing.Point(120, 4);
-            this.lbNum.Name = "lbNum";
-            this.lbNum.Size = new System.Drawing.Size(350, 110);
-            this.lbNum.TabIndex = 2;
-            this.lbNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
+            this.lbCounter.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCounter.ForeColor = System.Drawing.Color.Gold;
+            this.lbCounter.Location = new System.Drawing.Point(604, 4);
+            this.lbCounter.Name = "lbCounter";
+            this.lbCounter.Size = new System.Drawing.Size(350, 110);
+            this.lbCounter.TabIndex = 3;
+            this.lbCounter.Text = "1";
+            this.lbCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbGate
+            // lbQ
             // 
-            this.lbGate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
-            this.lbGate.Font = new System.Drawing.Font("DS-Digital", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGate.ForeColor = System.Drawing.Color.Gold;
-            this.lbGate.Location = new System.Drawing.Point(604, 4);
-            this.lbGate.Name = "lbGate";
-            this.lbGate.Size = new System.Drawing.Size(350, 110);
-            this.lbGate.TabIndex = 3;
-            this.lbGate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
+            this.lbQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbQ.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQ.ForeColor = System.Drawing.Color.Gold;
+            this.lbQ.Location = new System.Drawing.Point(120, 4);
+            this.lbQ.Name = "lbQ";
+            this.lbQ.Size = new System.Drawing.Size(350, 110);
+            this.lbQ.TabIndex = 2;
+            this.lbQ.Text = "C1";
+            this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbPerson
             // 
@@ -102,7 +104,7 @@ namespace mssDashboard.control
 
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.PictureBox pbPerson;
-        internal System.Windows.Forms.Label lbNum;
-        internal System.Windows.Forms.Label lbGate;
+        internal System.Windows.Forms.Label lbQ;
+        internal System.Windows.Forms.Label lbCounter;
     }
 }

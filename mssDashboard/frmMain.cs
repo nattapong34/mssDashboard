@@ -19,6 +19,7 @@ namespace mssDashboard
         List<onQueue> _qq;
         SimpleTcpServer server;
         history _his;
+        onQueue _q;
 
         public frmMain()
         {
@@ -29,6 +30,13 @@ namespace mssDashboard
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
             //Update mesage to txtStatus
+           //{"data":{"_id":"5fcdcccc9af2183c18139406","pre":"A","qid":2,
+           //     "create_date":"2020-12-15T06:33:48.224Z","status":"W",
+           //     "person":{"_id":"5fcdcccc9af2183c18139405","cid":"778899","fname":"","lname":"",
+           //         "address":"","birthdate":"19010101","eng_fname":"","eng_lname":"",
+           //         "imagefile":"","lastUpdate":"2020-12-07T06:33:48.217Z"},"__v":0}}
+
+
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
                 txtStatus.Text += e.MessageString;
@@ -73,8 +81,20 @@ namespace mssDashboard
             _his.addQueue("A1", "2");
             _his.addQueue("A2", "2");
             _his.addQueue("B1", "3");
-            _his.addQueue("B1", "3");
+            _his.addQueue("B2", "3");
             _his.addQueue("C1", "1");
+            _his.addQueue("A3", "2");
+            _his.addQueue("A4", "2");
+            _his.addQueue("B3", "3");
+            _his.addQueue("B4", "3");
+            _his.addQueue("C2", "1");
+            _his.removeQueue("A2", "2");
+
+            _q = new onQueue(ref pnMainQ);
+            _q.addQueue("A5","1", null);
+            _q.addQueue("B5", "2", null);
+            _q.addQueue("C3", "3", null);
+            _q.addQueue("C4", "3", null);
         }
 
         private void fatchDisplay(JObject q)

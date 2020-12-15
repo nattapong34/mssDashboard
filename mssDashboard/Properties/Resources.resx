@@ -118,6 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="digital_counter_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\digital_counter_7.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="digital_counter_7_italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\digital_counter_7_italic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS_DIGI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\DS-DIGI.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS_DIGIB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\DS-DIGIB.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS_DIGII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\DS-DIGII.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS_DIGIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\DS-DIGIT.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GAS_____" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\font\GAS_____.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="howto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\howto.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

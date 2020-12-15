@@ -9,57 +9,57 @@ using System.Windows.Forms;
 
 namespace mssDashboard
 {
-    class history
+    class onQueue
     {
         FlowLayoutPanel _pn;
-        int MAX_HQ = 7;
+        int MAX_HQ = 3;
 
-        public history(ref FlowLayoutPanel pn)
+        public onQueue(ref FlowLayoutPanel pn)
         {
             _pn = pn;
         }
-
-        public void addQueue(string qn,string dest)
+        public void addQueue(string qn, string dest,Image im)
         {
-            var _his = new ucHistory();
-            _his.setDisplay(qn, dest);
-            _pn.Controls.Add(_his);
+            var _q = new queueDisplay();
+            _q.setQ(qn, dest,im);
+            _pn.Controls.Add(_q);
             visibleQueue();
         }
         public void visibleQueue()
         {
             if (_pn.Controls.Count >= MAX_HQ)
             {
-                int x = 0;  
+                int x = 0;
 
                 foreach (Control c in _pn.Controls)
                 {
                     x++;
 
-                    if (c.GetType() == typeof(ucHistory))
+                    if (c.GetType() == typeof(queueDisplay))
                     {
-                        var h = (ucHistory)c;
+                        var h = (queueDisplay)c;
                         if (x <= _pn.Controls.Count - MAX_HQ)
                         {
-                            h.Visible = false;
+                            _pn.Controls.Remove(h);
                         }
                         else
                         {
                             var i = _pn.Controls.Count - x;
-                            h.lbQ.BackColor = Color.FromArgb(i * 12, 31 + i * 12, 84 + i * 12);
+                            h.lbQ.BackColor = Color.FromArgb(i * 5, 31 - i *5, 84 - i * 5);
+                            h.lbCounter.BackColor = Color.FromArgb(i * 5, 31 - i * 5, 84 - i * 5);
                         }
                     }
                 }
             }
         }
-        public void removeQueue(string qn,string dest)
+        public void removeQueue(string qn, string dest)
         {
             foreach (Control c in _pn.Controls)
             {
                 if (c.GetType() == typeof(ucHistory))
                 {
                     var h = (ucHistory)c;
-                   if (h.checkQ(qn,dest))
+                    if (h.checkQ(qn, dest))
                     {
                         _pn.Controls.Remove(h);
                     }

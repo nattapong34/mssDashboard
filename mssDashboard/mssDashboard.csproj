@@ -64,6 +64,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="history.cs" />
+    <Compile Include="onQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="control\ucHistory.resx">
@@ -91,8 +92,7 @@
     <None Include="font\DS-DIGIB.TTF" />
     <None Include="font\DS-DIGII.TTF" />
     <None Include="font\DS-DIGIT.TTF" />
-    <None Include="font\FLATPACK.TTF" />
-    <None Include="font\SUBWT___.ttf" />
+    <None Include="font\GAS_____.TTF" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
