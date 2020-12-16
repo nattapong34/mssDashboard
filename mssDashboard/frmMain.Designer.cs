@@ -37,8 +37,8 @@ namespace mssDashboard
             this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbQSkip = new System.Windows.Forms.Label();
+            this.lbQCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnCalling = new System.Windows.Forms.Panel();
@@ -119,9 +119,8 @@ namespace mssDashboard
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel13.Controls.Add(this.txtStatus);
-            this.panel13.Controls.Add(this.label5);
-            this.panel13.Controls.Add(this.label4);
+            this.panel13.Controls.Add(this.lbQSkip);
+            this.panel13.Controls.Add(this.lbQCount);
             this.panel13.Controls.Add(this.label3);
             this.panel13.Controls.Add(this.label2);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -132,34 +131,34 @@ namespace mssDashboard
             // 
             // txtStatus
             // 
-            this.txtStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txtStatus.Location = new System.Drawing.Point(741, 0);
+            this.txtStatus.Location = new System.Drawing.Point(1768, 17);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(119, 100);
+            this.txtStatus.Size = new System.Drawing.Size(119, 29);
             this.txtStatus.TabIndex = 4;
+            this.txtStatus.Visible = false;
             // 
-            // label5
+            // lbQSkip
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("DS-Digital", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.Location = new System.Drawing.Point(214, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 21);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "12";
+            this.lbQSkip.AutoSize = true;
+            this.lbQSkip.Font = new System.Drawing.Font("DS-Digital", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQSkip.ForeColor = System.Drawing.Color.Gold;
+            this.lbQSkip.Location = new System.Drawing.Point(214, 57);
+            this.lbQSkip.Name = "lbQSkip";
+            this.lbQSkip.Size = new System.Drawing.Size(27, 21);
+            this.lbQSkip.TabIndex = 3;
+            this.lbQSkip.Text = "12";
             // 
-            // label4
+            // lbQCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("DS-Digital", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label4.Location = new System.Drawing.Point(214, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 21);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "15";
+            this.lbQCount.AutoSize = true;
+            this.lbQCount.Font = new System.Drawing.Font("DS-Digital", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQCount.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lbQCount.Location = new System.Drawing.Point(214, 18);
+            this.lbQCount.Name = "lbQCount";
+            this.lbQCount.Size = new System.Drawing.Size(27, 21);
+            this.lbQCount.TabIndex = 2;
+            this.lbQCount.Text = "15";
             // 
             // label3
             // 
@@ -202,6 +201,8 @@ namespace mssDashboard
             this.pnMainQ.Name = "pnMainQ";
             this.pnMainQ.Size = new System.Drawing.Size(997, 410);
             this.pnMainQ.TabIndex = 5;
+            this.pnMainQ.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnMainQ_ControlAdded);
+            this.pnMainQ.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.pnMainQ_ControlRemoved);
             // 
             // panel2
             // 
@@ -217,12 +218,15 @@ namespace mssDashboard
             // pnHis
             // 
             this.pnHis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(9)))), ((int)(((byte)(8)))));
+            this.pnHis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnHis.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnHis.Location = new System.Drawing.Point(10, 102);
             this.pnHis.Name = "pnHis";
             this.pnHis.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
             this.pnHis.Size = new System.Drawing.Size(977, 196);
             this.pnHis.TabIndex = 3;
+            this.pnHis.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnHis_ControlAdded);
+            this.pnHis.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.pnHis_ControlRemoved);
             // 
             // label1
             // 
@@ -250,7 +254,7 @@ namespace mssDashboard
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(613, 10);
+            this.label7.Location = new System.Drawing.Point(632, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(347, 77);
             this.label7.TabIndex = 1;
@@ -261,7 +265,7 @@ namespace mssDashboard
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(115, 10);
+            this.label6.Location = new System.Drawing.Point(154, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(384, 77);
             this.label6.TabIndex = 0;
@@ -281,6 +285,7 @@ namespace mssDashboard
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel11.Controls.Add(this.txtStatus);
             this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Controls.Add(this.lbMessage);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -317,12 +322,12 @@ namespace mssDashboard
             this.lbClock.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbClock.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbClock.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbClock.Location = new System.Drawing.Point(1483, 0);
+            this.lbClock.Location = new System.Drawing.Point(870, 0);
             this.lbClock.Name = "lbClock";
-            this.lbClock.Size = new System.Drawing.Size(411, 52);
+            this.lbClock.Size = new System.Drawing.Size(1024, 52);
             this.lbClock.TabIndex = 0;
             this.lbClock.Text = "00:00";
-            this.lbClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbClock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // imageList1
             // 
@@ -375,6 +380,7 @@ namespace mssDashboard
             this.panel1.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -395,8 +401,8 @@ namespace mssDashboard
         private System.Windows.Forms.Timer tmClock;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbQSkip;
+        private System.Windows.Forms.Label lbQCount;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Panel pnCalling;
         private System.Windows.Forms.Panel panel1;

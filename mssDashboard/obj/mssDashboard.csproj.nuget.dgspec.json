@@ -79,6 +79,9 @@
             "projectReferences": {
               "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj": {
                 "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj"
+              },
+              "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj": {
+                "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj"
               }
             }
           }
@@ -108,6 +111,16 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj",
+        "projectName": "soundCalling",
+        "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj"
+      },
+      "frameworks": {
+        "net45": {}
       }
     }
   }

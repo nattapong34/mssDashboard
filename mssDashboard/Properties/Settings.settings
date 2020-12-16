@@ -3,19 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="QSERVER_API" Type="System.String" Scope="User">
-      <Value Profile="(Default)">10.91.1.186</Value>
+      <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="QSERVER_API_PORT" Type="System.String" Scope="User">
       <Value Profile="(Default)">3000</Value>
-    </Setting>
-    <Setting Name="QSTATION1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">A</Value>
-    </Setting>
-    <Setting Name="QSTATION2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">B</Value>
-    </Setting>
-    <Setting Name="QSTATION3" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C</Value>
     </Setting>
     <Setting Name="SOCKET_PORT" Type="System.String" Scope="User">
       <Value Profile="(Default)">9876</Value>

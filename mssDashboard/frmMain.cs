@@ -10,17 +10,24 @@ using System.Windows.Forms;
 using dbAPI;
 using Newtonsoft.Json.Linq;
 using SimpleTCP;
+using mssDashboard.Properties;
 
 namespace mssDashboard
 {
     public partial class frmMain : Form
     {
-        api _api;
-        List<onQueue> _qq;
         SimpleTcpServer server;
         history _his;
         onQueue _q;
 
+        string APIURL = $"http://{Settings.Default.QSERVER_API}:{Settings.Default.QSERVER_API_PORT}";
+        string APIIMG = $"http://{Settings.Default.QSERVER_API}:{Settings.Default.QSERVER_API_PORT}/personImage/";
+
+        private void countQueue()
+        {
+            lbQCount.Text = (pnMainQ.Controls.Count + pnHis.Controls.Count).ToString();
+            lbQSkip.Text = pnHis.Controls.Count.ToString();
+        }
         public frmMain()
         {
             InitializeComponent();
@@ -30,12 +37,19 @@ namespace mssDashboard
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
             //Update mesage to txtStatus
-           //{"data":{"_id":"5fcdcccc9af2183c18139406","pre":"A","qid":2,
-           //     "create_date":"2020-12-15T06:33:48.224Z","status":"W",
-           //     "person":{"_id":"5fcdcccc9af2183c18139405","cid":"778899","fname":"","lname":"",
-           //         "address":"","birthdate":"19010101","eng_fname":"","eng_lname":"",
-           //         "imagefile":"","lastUpdate":"2020-12-07T06:33:48.217Z"},"__v":0}}
+            //{"data":{"_id":"5fcdcccc9af2183c18139406","pre":"A","qid":2,
+            //     "create_date":"2020-12-15T06:33:48.224Z","status":"W",
+            //     "person":{"_id":"5fcdcccc9af2183c18139405","cid":"778899","fname":"","lname":"",
+            //         "address":"","birthdate":"19010101","eng_fname":"","eng_lname":"",
+            //         "imagefile":"","lastUpdate":"2020-12-07T06:33:48.217Z"},"__v":0}}
 
+            var obj = JObject.Parse(e.MessageString);
+            if (obj["data"].Count() > 0)
+            {
+                var q = obj["data"];
+                //lbQ.Text = q["pre"].ToString() + q["qid"].ToString();
+                //client.WriteLineAndGetReply(data, TimeSpan.FromSeconds(3));
+            }
 
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
@@ -91,31 +105,25 @@ namespace mssDashboard
             _his.removeQueue("A2", "2");
 
             _q = new onQueue(ref pnMainQ);
-            _q.addQueue("A5","1", null);
-            _q.addQueue("B5", "2", null);
+            _q.addQueue("A5","1", APIIMG+"test.png");
+            _q.addQueue("B5", "2", APIIMG + "tom.jpg");
             _q.addQueue("C3", "3", null);
-            _q.addQueue("C4", "3", null);
-        }
 
-        private void fatchDisplay(JObject q)
-        {
-            if (q["pre"].ToString()==Properties.Settings.Default.QSTATION1)
-            {
 
-            }
-            else if (q["pre"].ToString() == Properties.Settings.Default.QSTATION2)
-            {
+            var dt = DateTime.Parse("2020-12-15T06:33:48.224Z");
+            Console.WriteLine(dt);
 
-            }
-            else if (q["pre"].ToString() == Properties.Settings.Default.QSTATION3)
-            {
+            var sd =new soundCalling.cSound();
 
-            }
+            sd.talkCallingQ("A","35","1");
+           // sd.talkNum("21");
+           // sd.talkNum("31");
+            //  MessageBox.Show(sd.readNum((99).ToString()));
         }
 
         private void tmClock_Tick(object sender, EventArgs e)
         {
-            lbClock.Text = DateTime.Now.ToString("G");
+            lbClock.Text = DateTime.Now.ToString("F");
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -127,6 +135,26 @@ namespace mssDashboard
         private void mediaPlayer_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnHis_ControlAdded(object sender, ControlEventArgs e)
+        {
+            countQueue();
+        }
+
+        private void pnHis_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            countQueue();
+        }
+
+        private void pnMainQ_ControlAdded(object sender, ControlEventArgs e)
+        {
+            countQueue();
+        }
+
+        private void pnMainQ_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            countQueue();
         }
     }
 }

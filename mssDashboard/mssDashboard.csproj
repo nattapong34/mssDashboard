@@ -135,12 +135,20 @@
     <Content Include="media\howto.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\bg_m2.png" />
+    <None Include="Resources\bg_m.png" />
+    <None Include="Resources\black-mosaic-tiles.png" />
+    <None Include="Resources\perforated-metal-background.png" />
     <None Include="Resources\Mask_1-512.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dbAPI\dbAPI.csproj">
       <Project>{bf12f264-b3a0-4d4a-b909-a1b341ad2c75}</Project>
       <Name>dbAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\soundCalling\soundCalling.csproj">
+      <Project>{383ad555-9d39-4ff6-8a1c-83adda0aeda3}</Project>
+      <Name>soundCalling</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

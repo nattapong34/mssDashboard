@@ -12,4 +12,3 @@ C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\obj\Debug\dbAPI.dll
 C:\Users\ch.nattaponghotmail\Documents\mssDashboard\dbAPI\obj\Debug\dbAPI.pdb
-D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csprojAssemblyReference.cache

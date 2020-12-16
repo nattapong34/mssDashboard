@@ -32,6 +32,15 @@
         "runtime": {
           "bin/placeholder/dbAPI.dll": {}
         }
+      },
+      "soundCalling/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/soundCalling.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/soundCalling.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.5/win": {
@@ -64,6 +73,15 @@
         },
         "runtime": {
           "bin/placeholder/dbAPI.dll": {}
+        }
+      },
+      "soundCalling/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/soundCalling.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/soundCalling.dll": {}
         }
       }
     },
@@ -98,6 +116,15 @@
         "runtime": {
           "bin/placeholder/dbAPI.dll": {}
         }
+      },
+      "soundCalling/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/soundCalling.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/soundCalling.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.5/win-x86": {
@@ -130,6 +157,15 @@
         },
         "runtime": {
           "bin/placeholder/dbAPI.dll": {}
+        }
+      },
+      "soundCalling/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/soundCalling.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/soundCalling.dll": {}
         }
       }
     }
@@ -182,13 +218,19 @@
       "type": "project",
       "path": "../dbAPI/dbAPI.csproj",
       "msbuildProject": "../dbAPI/dbAPI.csproj"
+    },
+    "soundCalling/1.0.0": {
+      "type": "project",
+      "path": "../soundCalling/soundCalling.csproj",
+      "msbuildProject": "../soundCalling/soundCalling.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5": [
       "Newtonsoft.Json >= 12.0.3",
       "SimpleTCP >= 1.0.24",
-      "dbAPI >= 1.0.0"
+      "dbAPI >= 1.0.0",
+      "soundCalling >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -220,6 +262,9 @@
           "projectReferences": {
             "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj": {
               "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\dbAPI\\dbAPI.csproj"
+            },
+            "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj": {
+              "projectPath": "D:\\AUTT_PROJECT\\mssDashboard\\soundCalling\\soundCalling.csproj"
             }
           }
         }

@@ -18,7 +18,7 @@ namespace mssDashboard
         {
             _pn = pn;
         }
-        public void addQueue(string qn, string dest,Image im)
+        public void addQueue(string qn, string dest,string im,string time=null)
         {
             var _q = new queueDisplay();
             _q.setQ(qn, dest,im);

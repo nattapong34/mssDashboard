@@ -43,7 +43,7 @@ namespace mssDashboard.control
         {
             var n = DateTime.Now.Subtract(timestart);
             //Console.WriteLine(string.Format("{0:D2}:{1:D2}", n.Minutes, n.Seconds));
-            lbTimeleft.Text = string.Format("{0:D2}:{1:D2}", n.Minutes, n.Seconds);
+            lbTimeleft.Text = string.Format("{0} นาที", n.Minutes);
         }
     }
 }

@@ -52,11 +52,12 @@ namespace mssDashboard.control
             // lbCounter
             // 
             this.lbCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
+            this.lbCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbCounter.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCounter.ForeColor = System.Drawing.Color.Gold;
-            this.lbCounter.Location = new System.Drawing.Point(604, 4);
+            this.lbCounter.Location = new System.Drawing.Point(620, 0);
             this.lbCounter.Name = "lbCounter";
-            this.lbCounter.Size = new System.Drawing.Size(350, 110);
+            this.lbCounter.Size = new System.Drawing.Size(350, 120);
             this.lbCounter.TabIndex = 3;
             this.lbCounter.Text = "1";
             this.lbCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,12 +65,13 @@ namespace mssDashboard.control
             // lbQ
             // 
             this.lbQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
+            this.lbQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbQ.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQ.ForeColor = System.Drawing.Color.Gold;
-            this.lbQ.Location = new System.Drawing.Point(120, 4);
+            this.lbQ.Location = new System.Drawing.Point(159, 0);
             this.lbQ.Name = "lbQ";
-            this.lbQ.Size = new System.Drawing.Size(350, 110);
+            this.lbQ.Size = new System.Drawing.Size(350, 120);
             this.lbQ.TabIndex = 2;
             this.lbQ.Text = "C1";
             this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +83,7 @@ namespace mssDashboard.control
             this.pbPerson.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbPerson.Location = new System.Drawing.Point(0, 0);
             this.pbPerson.Name = "pbPerson";
-            this.pbPerson.Size = new System.Drawing.Size(114, 120);
+            this.pbPerson.Size = new System.Drawing.Size(153, 120);
             this.pbPerson.TabIndex = 1;
             this.pbPerson.TabStop = false;
             // 

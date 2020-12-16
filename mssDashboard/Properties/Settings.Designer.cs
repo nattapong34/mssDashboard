@@ -25,7 +25,7 @@ namespace mssDashboard.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10.91.1.186")]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
         public string QSERVER_API {
             get {
                 return ((string)(this["QSERVER_API"]));
@@ -44,42 +44,6 @@ namespace mssDashboard.Properties {
             }
             set {
                 this["QSERVER_API_PORT"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("A")]
-        public string QSTATION1 {
-            get {
-                return ((string)(this["QSTATION1"]));
-            }
-            set {
-                this["QSTATION1"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("B")]
-        public string QSTATION2 {
-            get {
-                return ((string)(this["QSTATION2"]));
-            }
-            set {
-                this["QSTATION2"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C")]
-        public string QSTATION3 {
-            get {
-                return ((string)(this["QSTATION3"]));
-            }
-            set {
-                this["QSTATION3"] = value;
             }
         }
         

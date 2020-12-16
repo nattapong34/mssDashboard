@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mssDashboard", "mssDashboar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbAPI", "dbAPI\dbAPI.csproj", "{BF12F264-B3A0-4D4A-B909-A1B341AD2C75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soundCalling", "soundCalling\soundCalling.csproj", "{383AD555-9D39-4FF6-8A1C-83ADDA0AEDA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BF12F264-B3A0-4D4A-B909-A1B341AD2C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF12F264-B3A0-4D4A-B909-A1B341AD2C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF12F264-B3A0-4D4A-B909-A1B341AD2C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383AD555-9D39-4FF6-8A1C-83ADDA0AEDA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383AD555-9D39-4FF6-8A1C-83ADDA0AEDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383AD555-9D39-4FF6-8A1C-83ADDA0AEDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383AD555-9D39-4FF6-8A1C-83ADDA0AEDA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -70,19 +70,19 @@ namespace mssDashboard.control
             // 
             this.lbTimeleft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbTimeleft.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTimeleft.Font = new System.Drawing.Font("Gas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimeleft.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimeleft.ForeColor = System.Drawing.Color.DarkBlue;
             this.lbTimeleft.Location = new System.Drawing.Point(0, 141);
             this.lbTimeleft.Name = "lbTimeleft";
             this.lbTimeleft.Size = new System.Drawing.Size(127, 27);
             this.lbTimeleft.TabIndex = 4;
-            this.lbTimeleft.Text = "0:00";
+            this.lbTimeleft.Text = "0 นาที";
             this.lbTimeleft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTitle
             // 
             this.lbTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(0, 60);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(127, 34);
