@@ -70,5 +70,17 @@ namespace mssDashboard.Properties {
                 this["CAPTION"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10.91.1.186")]
+        public string MY_IP {
+            get {
+                return ((string)(this["MY_IP"]));
+            }
+            set {
+                this["MY_IP"] = value;
+            }
+        }
     }
 }

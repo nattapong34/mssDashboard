@@ -18,12 +18,20 @@ namespace mssDashboard
         {
             _pn = pn;
         }
+        private void addtoPanel(ucHistory _q)
+        {
+            if (_pn.InvokeRequired)
+                _pn.Invoke(new MethodInvoker(() => { _pn.Controls.Add(_q); }));
+            else
+                _pn.Controls.Add(_q);
+        }
 
         public void addQueue(string qn,string dest)
         {
             var _his = new ucHistory();
             _his.setDisplay(qn, dest);
-            _pn.Controls.Add(_his);
+            addtoPanel(_his);
+            //_pn.Controls.Add(_his);
             visibleQueue();
         }
         public void visibleQueue()

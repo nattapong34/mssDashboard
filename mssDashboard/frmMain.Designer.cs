@@ -34,9 +34,7 @@ namespace mssDashboard
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pbADV = new System.Windows.Forms.Panel();
-            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.lbQSkip = new System.Windows.Forms.Label();
             this.lbQCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,24 +49,26 @@ namespace mssDashboard
             this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbMessage = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lbClock = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pbADV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.panel13.SuspendLayout();
             this.pnCalling.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -105,17 +105,6 @@ namespace mssDashboard
             this.pbADV.Size = new System.Drawing.Size(860, 816);
             this.pbADV.TabIndex = 2;
             // 
-            // mediaPlayer
-            // 
-            this.mediaPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mediaPlayer.Enabled = true;
-            this.mediaPlayer.Location = new System.Drawing.Point(2, 2);
-            this.mediaPlayer.Name = "mediaPlayer";
-            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
-            this.mediaPlayer.Size = new System.Drawing.Size(856, 812);
-            this.mediaPlayer.TabIndex = 0;
-            this.mediaPlayer.Enter += new System.EventHandler(this.mediaPlayer_Enter);
-            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -128,15 +117,6 @@ namespace mssDashboard
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(860, 100);
             this.panel13.TabIndex = 1;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(1768, 17);
-            this.txtStatus.Multiline = true;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(119, 29);
-            this.txtStatus.TabIndex = 4;
-            this.txtStatus.Visible = false;
             // 
             // lbQSkip
             // 
@@ -197,6 +177,7 @@ namespace mssDashboard
             // 
             // pnMainQ
             // 
+            this.pnMainQ.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.pnMainQ.Location = new System.Drawing.Point(13, 135);
             this.pnMainQ.Name = "pnMainQ";
             this.pnMainQ.Size = new System.Drawing.Size(997, 410);
@@ -209,7 +190,7 @@ namespace mssDashboard
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
             this.panel2.Controls.Add(this.pnHis);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(14, 572);
+            this.panel2.Location = new System.Drawing.Point(14, 591);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
             this.panel2.Size = new System.Drawing.Size(997, 308);
@@ -220,6 +201,7 @@ namespace mssDashboard
             this.pnHis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(9)))), ((int)(((byte)(8)))));
             this.pnHis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnHis.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnHis.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.pnHis.Location = new System.Drawing.Point(10, 102);
             this.pnHis.Name = "pnHis";
             this.pnHis.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
@@ -294,6 +276,27 @@ namespace mssDashboard
             this.panel11.Size = new System.Drawing.Size(1894, 53);
             this.panel11.TabIndex = 1;
             // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(1768, 17);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(119, 29);
+            this.txtStatus.TabIndex = 4;
+            this.txtStatus.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = global::mssDashboard.Properties.Resources.ppg11168;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 53);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // lbMessage
             // 
             this.lbMessage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -341,17 +344,16 @@ namespace mssDashboard
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // pictureBox1
+            // mediaPlayer
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImage = global::mssDashboard.Properties.Resources.ppg11168;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 53);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.mediaPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mediaPlayer.Enabled = true;
+            this.mediaPlayer.Location = new System.Drawing.Point(2, 2);
+            this.mediaPlayer.Name = "mediaPlayer";
+            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
+            this.mediaPlayer.Size = new System.Drawing.Size(856, 812);
+            this.mediaPlayer.TabIndex = 0;
+            this.mediaPlayer.Enter += new System.EventHandler(this.mediaPlayer_Enter);
             // 
             // frmMain
             // 
@@ -363,14 +365,15 @@ namespace mssDashboard
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMain";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
-            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Load += new System.EventHandler(this.frmMain_LoadAsync);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.pbADV.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.pnCalling.ResumeLayout(false);
@@ -381,8 +384,9 @@ namespace mssDashboard
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }

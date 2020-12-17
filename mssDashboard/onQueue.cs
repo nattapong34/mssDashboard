@@ -18,12 +18,50 @@ namespace mssDashboard
         {
             _pn = pn;
         }
+
+
+        private void addtoPanel(queueDisplay _q)
+        {
+            if (_pn.InvokeRequired)
+                _pn.Invoke(new MethodInvoker(() => { _pn.Controls.Add(_q); }));
+            else
+                _pn.Controls.Add(_q);
+        }
+        private void removeQonPanel(queueDisplay h)
+        {
+            if (_pn.InvokeRequired)
+                _pn.Invoke(new MethodInvoker(() => { _pn.Controls.Remove(h); }));
+            else
+                _pn.Controls.Remove(h);
+        }
+
         public void addQueue(string qn, string dest,string im,string time=null)
         {
             var _q = new queueDisplay();
             _q.setQ(qn, dest,im);
-            _pn.Controls.Add(_q);
+
+            // remove befor add
+            removeMainQueue(qn, dest);
+
+            //_pn.Controls.Add(_q);
+            addtoPanel(_q);
             visibleQueue();
+        }
+        public void removeMainQueue(string qn, string dest)
+        {
+            foreach (Control c in _pn.Controls)
+            {
+                if (c.GetType() == typeof(queueDisplay))
+                {
+                    var h = (queueDisplay)c;
+                    if (h.checkQ(qn, dest))
+                    {
+                        removeQonPanel(h);
+                        break;
+                    }
+                    //myFlowLayoutPanel.Controls.Remove(c);
+                }
+            }
         }
         public void visibleQueue()
         {
@@ -40,7 +78,7 @@ namespace mssDashboard
                         var h = (queueDisplay)c;
                         if (x <= _pn.Controls.Count - MAX_HQ)
                         {
-                            _pn.Controls.Remove(h);
+                            removeQonPanel(h);
                         }
                         else
                         {

@@ -14,5 +14,8 @@
     <Setting Name="CAPTION" Type="System.String" Scope="User">
       <Value Profile="(Default)">-- ยินดีต้อนรับ --</Value>
     </Setting>
+    <Setting Name="MY_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.91.1.186</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1,6 +1,3 @@
-D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\Interop.WMPLib.dll
-D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.ResolveComReference.cache
-D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.CoreCompileInputs.cache
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\sound\1.mp3
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\sound\10.mp3
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\sound\100.mp3
@@ -32,5 +29,8 @@ D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\sound\calling.mp3
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\sound\sendto.mp3
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\soundCalling.dll
 D:\AUTT_PROJECT\mssDashboard\soundCalling\bin\Debug\soundCalling.pdb
+D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\Interop.WMPLib.dll
+D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.ResolveComReference.cache
+D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.CoreCompileInputs.cache
 D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.dll
 D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.pdb

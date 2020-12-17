@@ -80,6 +80,10 @@ namespace soundCalling
             addPlaylist(ref pl, path + "sendto.mp3");
             talkNum(ref pl, sendto);
             playSound(ref pl);
+
+            Console.WriteLine("windows media");
+            Console.WriteLine(wplayer.playState);
+
             // addPlaylist(ref pl, path + );
         }
         public void talkNum(ref WMPLib.IWMPPlaylist pl,string n)

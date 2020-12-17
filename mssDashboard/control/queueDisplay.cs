@@ -23,15 +23,22 @@ namespace mssDashboard.control
 
             lbQ.Text = qid;
             lbCounter.Text = send;
+
             if (im != null)
             {
-                var request = WebRequest.Create(im);
-
-                using (var response = request.GetResponse())
-                using (var stream = response.GetResponseStream())
+                try
                 {
-                 //   pbPerson.BackgroundImage = null;
-                    pbPerson.BackgroundImage = Bitmap.FromStream(stream);
+                    var request = WebRequest.Create(im);
+
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        //   pbPerson.BackgroundImage = null;
+                        pbPerson.BackgroundImage = Bitmap.FromStream(stream);
+                    }
+                }catch
+                {
+
                 }
             }
             //if (im != null)
@@ -40,6 +47,14 @@ namespace mssDashboard.control
             //    Stream stream = req.GetResponse().GetResponseStream();
             //    pbPerson.BackgroundImage =  GetImageFromURL(im);
             //}
+        }
+        public bool checkQ(string q, string c)
+        {
+            if (lbQ.Text == q && lbCounter.Text == c)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
