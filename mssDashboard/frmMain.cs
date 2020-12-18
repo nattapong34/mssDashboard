@@ -35,7 +35,7 @@ namespace mssDashboard
         public frmMain()
         {
             InitializeComponent();
-
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("th-TH");
         }
 
   
@@ -67,12 +67,12 @@ namespace mssDashboard
 
 
 
-                if (q["MSG"].ToString() == "C")
+                if (q["status"].ToString() == "W")
                 {
                     _q.addQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString(), APIIMG + q["person"]["imagefile"].ToString());
                     sd.talkCallingQ(q["pre"].ToString(), q["qid"].ToString(), q["station"].ToString());
                 }
-                else if (q["MSG"].ToString() == "S")
+                else if (q["status"].ToString() == "S")
                 {
                     _his.addQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
                     _q.removeMainQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
@@ -91,7 +91,7 @@ namespace mssDashboard
 
         private void frmMain_LoadAsync(object sender, EventArgs e)
         {
-            mediaPlayer.URL = Application.StartupPath + "//media/howto.mp4";
+            mediaPlayer.URL = Application.StartupPath + Properties.Settings.Default.VDOFILE;
             mediaPlayer.settings.setMode("loop", true);
 
             mediaPlayer.Ctlcontrols.play();
@@ -189,6 +189,14 @@ namespace mssDashboard
         private void pnMainQ_ControlRemoved(object sender, ControlEventArgs e)
         {
             countQueue();
+        }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("ต้องการออกจากโปรแกรม", "กรุณายืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
         }
     }
 }

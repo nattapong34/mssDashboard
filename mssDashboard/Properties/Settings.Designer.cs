@@ -73,13 +73,25 @@ namespace mssDashboard.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10.91.1.186")]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
         public string MY_IP {
             get {
                 return ((string)(this["MY_IP"]));
             }
             set {
                 this["MY_IP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("//media/howto.mp4")]
+        public string VDOFILE {
+            get {
+                return ((string)(this["VDOFILE"]));
+            }
+            set {
+                this["VDOFILE"] = value;
             }
         }
     }

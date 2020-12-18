@@ -15,7 +15,10 @@
       <Value Profile="(Default)">-- ยินดีต้อนรับ --</Value>
     </Setting>
     <Setting Name="MY_IP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">10.91.1.186</Value>
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="VDOFILE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">//media/howto.mp4</Value>
     </Setting>
   </Settings>
 </SettingsFile>
