@@ -24,7 +24,7 @@ namespace mssDashboard.control
             lbQ.Text = qid;
             lbCounter.Text = send;
 
-            if (im != null)
+            if (im!=null)
             {
                 try
                 {
@@ -41,6 +41,10 @@ namespace mssDashboard.control
 
                 }
             }
+            else
+            {
+            }
+
             //if (im != null)
             //{
             //    WebRequest req = WebRequest.Create(im);

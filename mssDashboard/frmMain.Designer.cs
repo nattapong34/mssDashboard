@@ -188,6 +188,7 @@ namespace mssDashboard
             // 
             // pnMainQ
             // 
+            this.pnMainQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(12)))), ((int)(((byte)(35)))));
             this.pnMainQ.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.pnMainQ.Location = new System.Drawing.Point(13, 135);
             this.pnMainQ.Name = "pnMainQ";

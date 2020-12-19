@@ -25,7 +25,7 @@ namespace mssDashboard.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10.91.1.200")]
         public string QSERVER_API {
             get {
                 return ((string)(this["QSERVER_API"]));

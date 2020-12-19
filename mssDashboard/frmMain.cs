@@ -67,8 +67,9 @@ namespace mssDashboard
 
 
 
-                if (q["status"].ToString() == "W")
+                if (q["status"].ToString() == "W" || q["status"].ToString()=="C")
                 {
+                   // MessageBox.Show(APIIMG + q["person"]["imagefile"].ToString());
                     _q.addQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString(), APIIMG + q["person"]["imagefile"].ToString());
                     sd.talkCallingQ(q["pre"].ToString(), q["qid"].ToString(), q["station"].ToString());
                 }
@@ -136,9 +137,10 @@ namespace mssDashboard
             //_his.removeQueue("A2", "2");
 
             _q = new onQueue(ref pnMainQ);
-            //_q.addQueue("A5","1", APIIMG+"test.png");
+            //var img = APIIMG + $"T25.png";
+            //_q.addQueue("A5", "1", APIIMG + "tom3.png");
             //_q.addQueue("B5", "2", APIIMG + "tom.jpg");
-            //_q.addQueue("C3", "3", null);
+            //_q.addQueue("C3", "3", "http://10.91.1.200:3000/personImage/T25.png");
 
 
             var dt = DateTime.Parse("2020-12-15T06:33:48.224Z");
