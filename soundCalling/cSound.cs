@@ -9,9 +9,27 @@ namespace soundCalling
 {
     public class cSound
     {
-        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+        WMPLib.WindowsMediaPlayer wplayer;
         string path = Environment.CurrentDirectory + @"\sound\";
-       // var playlist = wplayer.newPlaylist(n, "");
+
+        WMPLib.IWMPPlaylist pl;
+
+        public cSound()
+        {
+            wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_PlayStateChange);
+            pl = newPlaylist("Onqueue");
+        }
+
+        void wplayer_PlayStateChange(int NewState)
+        {
+           // wplayer.currentPlaylist.attributeCount();
+            if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                Console.WriteLine(wplayer.playState);
+            }
+        }
+        // var playlist = wplayer.newPlaylist(n, "");
 
         private List<string> readNum(string strNumber)
         {
@@ -73,13 +91,14 @@ namespace soundCalling
 
         public void talkCallingQ(string pre,string qid,string sendto)
         {
-            var pl = newPlaylist(pre + qid +" " + sendto);
+          //  var pl = newPlaylist(pre + qid +" " + sendto);
             addPlaylist(ref pl, path + "calling.mp3");
             addPlaylist(ref pl, path + pre + ".mp3");
             talkNum(ref pl, qid);
             addPlaylist(ref pl, path + "sendto.mp3");
             talkNum(ref pl, sendto);
-            playSound(ref pl);
+            if (wplayer.playState != WMPPlayState.wmppsPlaying)
+                 playSound(ref pl);
 
             Console.WriteLine("windows media");
             Console.WriteLine(wplayer.playState);

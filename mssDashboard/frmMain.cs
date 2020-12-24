@@ -21,7 +21,7 @@ namespace mssDashboard
         history _his;
         onQueue _q;
 
-        Queue<JObject> _cal = new Queue<JObject>();
+     //   Queue<JObject> _cal = new Queue<JObject>();
         soundCalling.cSound sd = new soundCalling.cSound();
 
         string APIURL = $"http://{Settings.Default.QSERVER_API}:{Settings.Default.QSERVER_API_PORT}";
@@ -55,7 +55,10 @@ namespace mssDashboard
             string msg = e.MessageString;
             msg = msg.Substring(0, msg.IndexOf("\u0013"));
             var obj = JObject.Parse(msg);
-            _cal.Enqueue(obj);
+          //  _cal.Enqueue(obj);
+
+            string replyMessage ="OK"; //This is the reply message
+            e.ReplyLine(replyMessage);
 
 
 

@@ -29,10 +29,12 @@ namespace mssDashboard.control
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbCounter = new System.Windows.Forms.Label();
             this.lbQ = new System.Windows.Forms.Label();
             this.pbPerson = new System.Windows.Forms.PictureBox();
+            this.tmTrick = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerson)).BeginInit();
             this.SuspendLayout();
@@ -51,34 +53,32 @@ namespace mssDashboard.control
             // 
             // lbCounter
             // 
-            this.lbCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
-            this.lbCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lbCounter.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCounter.ForeColor = System.Drawing.Color.Gold;
-            this.lbCounter.Location = new System.Drawing.Point(620, 0);
+            this.lbCounter.Location = new System.Drawing.Point(597, 0);
             this.lbCounter.Name = "lbCounter";
-            this.lbCounter.Size = new System.Drawing.Size(350, 120);
+            this.lbCounter.Size = new System.Drawing.Size(364, 120);
             this.lbCounter.TabIndex = 3;
             this.lbCounter.Text = "1";
             this.lbCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbQ
             // 
-            this.lbQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(84)))));
-            this.lbQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lbQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbQ.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQ.ForeColor = System.Drawing.Color.Gold;
             this.lbQ.Location = new System.Drawing.Point(159, 0);
             this.lbQ.Name = "lbQ";
-            this.lbQ.Size = new System.Drawing.Size(350, 120);
+            this.lbQ.Size = new System.Drawing.Size(364, 120);
             this.lbQ.TabIndex = 2;
             this.lbQ.Text = "C1";
             this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbPerson
             // 
-            this.pbPerson.BackgroundImage = global::mssDashboard.Properties.Resources.Mask_1_512;
+            this.pbPerson.BackgroundImage = global::mssDashboard.Properties.Resources.human_mask;
             this.pbPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbPerson.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbPerson.Location = new System.Drawing.Point(0, 0);
@@ -86,6 +86,12 @@ namespace mssDashboard.control
             this.pbPerson.Size = new System.Drawing.Size(153, 120);
             this.pbPerson.TabIndex = 1;
             this.pbPerson.TabStop = false;
+            // 
+            // tmTrick
+            // 
+            this.tmTrick.Enabled = true;
+            this.tmTrick.Interval = 1000;
+            this.tmTrick.Tick += new System.EventHandler(this.tmTrick_Tick);
             // 
             // queueDisplay
             // 
@@ -108,5 +114,6 @@ namespace mssDashboard.control
         internal System.Windows.Forms.PictureBox pbPerson;
         internal System.Windows.Forms.Label lbQ;
         internal System.Windows.Forms.Label lbCounter;
+        private System.Windows.Forms.Timer tmTrick;
     }
 }

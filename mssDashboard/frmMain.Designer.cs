@@ -51,12 +51,12 @@ namespace mssDashboard
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lbMessage = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lbClock = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pbADV.SuspendLayout();
@@ -67,8 +67,8 @@ namespace mssDashboard
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -188,11 +188,12 @@ namespace mssDashboard
             // 
             // pnMainQ
             // 
-            this.pnMainQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(12)))), ((int)(((byte)(35)))));
+            this.pnMainQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.pnMainQ.BackgroundImage = global::mssDashboard.Properties.Resources.bg_m2;
             this.pnMainQ.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.pnMainQ.Location = new System.Drawing.Point(13, 135);
+            this.pnMainQ.Location = new System.Drawing.Point(13, 116);
             this.pnMainQ.Name = "pnMainQ";
-            this.pnMainQ.Size = new System.Drawing.Size(997, 410);
+            this.pnMainQ.Size = new System.Drawing.Size(997, 469);
             this.pnMainQ.TabIndex = 5;
             this.pnMainQ.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnMainQ_ControlAdded);
             this.pnMainQ.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.pnMainQ_ControlRemoved);
@@ -235,6 +236,7 @@ namespace mssDashboard
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -297,19 +299,6 @@ namespace mssDashboard
             this.txtStatus.TabIndex = 4;
             this.txtStatus.Visible = false;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogo.BackgroundImage = global::mssDashboard.Properties.Resources.ppg11168;
-            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(85, 53);
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
-            // 
             // lbMessage
             // 
             this.lbMessage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -357,6 +346,19 @@ namespace mssDashboard
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackgroundImage = global::mssDashboard.Properties.Resources.ppg11168;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(85, 53);
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -372,9 +374,7 @@ namespace mssDashboard
             this.MinimizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "MSSQ";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_LoadAsync);
@@ -392,8 +392,8 @@ namespace mssDashboard
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

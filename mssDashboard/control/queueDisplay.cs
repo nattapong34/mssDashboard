@@ -14,9 +14,14 @@ namespace mssDashboard.control
 {
     public partial class queueDisplay : UserControl
     {
+        bool blink;
+        int count;
         public queueDisplay()
         {
             InitializeComponent();
+            blink = false;
+            count = 6;
+            this.BackColor = Color.Gold;
         }
         public void setQ(string qid,string send,string im)
         {
@@ -54,11 +59,36 @@ namespace mssDashboard.control
         }
         public bool checkQ(string q, string c)
         {
-            if (lbQ.Text == q && lbCounter.Text == c)
+            //if (lbQ.Text == q && lbCounter.Text == c)
+            //{
+            //    return true;
+            //}
+            if (lbCounter.Text == c)
             {
                 return true;
             }
             return false;
+        }
+
+        private void tmTrick_Tick(object sender, EventArgs e)
+        {       
+            blink = !blink;
+            if (blink)
+            {
+            
+                this.BackColor = Color.Gold;
+            }
+            else
+            {
+                this.BackColor = Color.Transparent;
+            }
+            this.count--;
+            //if (this.count==0)
+            //{
+            //    tmTrick.Enabled = false;
+            //    this.BackColor = Color.Transparent;
+            //}
+            Console.WriteLine(blink.ToString());
         }
     }
 }
