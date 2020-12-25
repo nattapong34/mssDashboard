@@ -57,8 +57,6 @@ namespace mssDashboard
             var obj = JObject.Parse(msg);
           //  _cal.Enqueue(obj);
 
-            string replyMessage ="OK"; //This is the reply message
-            e.ReplyLine(replyMessage);
 
 
 
@@ -82,6 +80,8 @@ namespace mssDashboard
                     _q.removeMainQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
                 }
 
+                string replyMessage = "OK"; //This is the reply message
+                e.ReplyLine(replyMessage);
                 //lbQ.Text = q["pre"].ToString() + q["qid"].ToString();
                 //client.WriteLineAndGetReply(data, TimeSpan.FromSeconds(3));
             }
@@ -89,7 +89,7 @@ namespace mssDashboard
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
                 txtStatus.Text += e.MessageString;
-                e.ReplyLine(string.Format("You said: {0}", e.MessageString));
+               // e.ReplyLine(string.Format("You said: {0}", e.MessageString));
             });
         }
 

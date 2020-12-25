@@ -34,7 +34,7 @@ namespace mssDashboard.control
             this.lbCounter = new System.Windows.Forms.Label();
             this.lbQ = new System.Windows.Forms.Label();
             this.pbPerson = new System.Windows.Forms.PictureBox();
-            this.tmTrick = new System.Windows.Forms.Timer(this.components);
+            this.tmTick = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerson)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@ namespace mssDashboard.control
             // 
             // lbCounter
             // 
-            this.lbCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.lbCounter.BackColor = System.Drawing.Color.Black;
             this.lbCounter.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCounter.ForeColor = System.Drawing.Color.Gold;
             this.lbCounter.Location = new System.Drawing.Point(597, 0);
@@ -65,7 +65,7 @@ namespace mssDashboard.control
             // 
             // lbQ
             // 
-            this.lbQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.lbQ.BackColor = System.Drawing.Color.Black;
             this.lbQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbQ.Font = new System.Drawing.Font("Gas", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQ.ForeColor = System.Drawing.Color.Gold;
@@ -87,11 +87,10 @@ namespace mssDashboard.control
             this.pbPerson.TabIndex = 1;
             this.pbPerson.TabStop = false;
             // 
-            // tmTrick
+            // tmTick
             // 
-            this.tmTrick.Enabled = true;
-            this.tmTrick.Interval = 1000;
-            this.tmTrick.Tick += new System.EventHandler(this.tmTrick_Tick);
+            this.tmTick.Interval = 200;
+            this.tmTick.Tick += new System.EventHandler(this.tmTick_Tick);
             // 
             // queueDisplay
             // 
@@ -114,6 +113,6 @@ namespace mssDashboard.control
         internal System.Windows.Forms.PictureBox pbPerson;
         internal System.Windows.Forms.Label lbQ;
         internal System.Windows.Forms.Label lbCounter;
-        private System.Windows.Forms.Timer tmTrick;
+        private System.Windows.Forms.Timer tmTick;
     }
 }
