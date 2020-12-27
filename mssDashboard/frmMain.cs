@@ -149,11 +149,13 @@ namespace mssDashboard
             var dt = DateTime.Parse("2020-12-15T06:33:48.224Z");
             Console.WriteLine(dt);
 
+            countQueue();
+
 
             // sd.talkCallingQ("A","101","4");
-           // sd.talkCallingQ("A", "21", "2");
+            // sd.talkCallingQ("A", "21", "2");
             // sd.talkNum("21");
-           // sd.talkNum("31");
+            // sd.talkNum("31");
             //  MessageBox.Show(sd.readNum((99).ToString()));
         }
         void talkQueue()

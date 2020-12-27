@@ -34,3 +34,4 @@ D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.ResolveC
 D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csproj.CoreCompileInputs.cache
 D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.dll
 D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.pdb
+D:\AUTT_PROJECT\mssDashboard\soundCalling\obj\Debug\soundCalling.csprojAssemblyReference.cache
