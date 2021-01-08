@@ -111,10 +111,7 @@ namespace mssDashboard.control
             }
             return false;
         }
-        private void tmTick_Tick(object sender, EventArgs e)
-        {
 
-        }
         void setBlink()
         {
             blink = !blink;

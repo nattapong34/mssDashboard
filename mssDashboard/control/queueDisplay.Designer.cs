@@ -29,12 +29,10 @@ namespace mssDashboard.control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbCounter = new System.Windows.Forms.Label();
             this.lbQ = new System.Windows.Forms.Label();
             this.pbPerson = new System.Windows.Forms.PictureBox();
-            this.tmTick = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerson)).BeginInit();
             this.SuspendLayout();
@@ -87,11 +85,6 @@ namespace mssDashboard.control
             this.pbPerson.TabIndex = 1;
             this.pbPerson.TabStop = false;
             // 
-            // tmTick
-            // 
-            this.tmTick.Interval = 200;
-            this.tmTick.Tick += new System.EventHandler(this.tmTick_Tick);
-            // 
             // queueDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +106,5 @@ namespace mssDashboard.control
         internal System.Windows.Forms.PictureBox pbPerson;
         internal System.Windows.Forms.Label lbQ;
         internal System.Windows.Forms.Label lbCounter;
-        private System.Windows.Forms.Timer tmTick;
     }
 }

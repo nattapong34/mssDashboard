@@ -55,6 +55,7 @@ namespace soundCalling
             BackgroundWorker worker = (BackgroundWorker)sender;
             while (!worker.CancellationPending)
             {
+                Console.WriteLine("PLAYLIST : " +Playlist.Count);
                 //Do your stuff here
                 // Do Work
                 if (PlayStateStopped && Playlist.Count>0)
@@ -202,15 +203,20 @@ namespace soundCalling
 
         public void talkCallingQ(string pre,string qid,string sendto)
         {
-          //  var pl = newPlaylist(pre + qid +" " + sendto);
+            //  var pl = newPlaylist(pre + qid +" " + sendto);
+            if (!PlayStateStopped && Playlist.Count == 0)
+                PlayStateStopped = true;
+
             addPlaylist( path + "calling.mp3");
             addPlaylist( path + pre + ".mp3");
             talkNum(qid);
             addPlaylist( path + "sendto.mp3");
             talkNum(sendto);
 
-            RunPlaylist();
-           // playSound(ref pl);
+ 
+
+            //  RunPlaylist();
+            // playSound(ref pl);
 
             Console.WriteLine("windows media");
             //Console.WriteLine(wplayer.playState);

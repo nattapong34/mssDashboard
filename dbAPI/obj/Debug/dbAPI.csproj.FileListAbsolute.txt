@@ -12,4 +12,3 @@ D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CoreCompileInputs.cach
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.dll
 D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.pdb
-D:\AUTT_PROJECT\mssDashboard\dbAPI\obj\Debug\dbAPI.csprojAssemblyReference.cache

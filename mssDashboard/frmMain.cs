@@ -36,30 +36,20 @@ namespace mssDashboard
         {
             InitializeComponent();
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("th-TH");
+
+            //sd.talkCallingQ("A","1","1");
+            //sd.talkCallingQ("A", "2", "1");
+            //sd.talkCallingQ("B", "1", "2");
         }
 
-  
+
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
-            //Update mesage to txtStatus
-            //{"data":{"_id":"5fcdcccc9af2183c18139406","pre":"A","qid":2,
-            //  "create_date":"2020-12-15T06:33:48.224Z","status":"W",
-            //  "person":{"_id":"5fcdcccc9af2183c18139405","cid":"778899","fname":"","lname":"",
-            //  "address":"","birthdate":"19010101","eng_fname":"","eng_lname":"",
-            //  "imagefile":"","lastUpdate":"2020-12-07T06:33:48.217Z"},"__v":0}}
-
-            //{"data":{"_id":"5fcdca6c76c39b4c408851c4","pre":"A","qid":1,"create_date":"2020-12-17T06:23:40.341Z","status":"W","person":{"_id":"5fcdca6c76c39b4c408851c3","cid":"55661122","fname":"","lname":"","address":"","birthdate":"19010101","eng_fname":"","eng_lname":"","imagefile":"test.png","lastUpdate":"2020-12-07T06:23:40.340Z"},"__v":0}}
-
 
             string msg = e.MessageString;
             msg = msg.Substring(0, msg.IndexOf("\u0013"));
             var obj = JObject.Parse(msg);
-          //  _cal.Enqueue(obj);
-
-
-
-
 
             if (obj["data"].Count() > 0)
             {
@@ -79,17 +69,19 @@ namespace mssDashboard
                     _his.addQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
                     _q.removeMainQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
                 }
+                else if (q["status"].ToString() == "R")    // remove  history
+                {
+                    _his.removeQueue(q["pre"].ToString() + q["qid"].ToString(), q["station"].ToString());
+                }
 
-                string replyMessage = "OK"; //This is the reply message
-                e.ReplyLine(replyMessage);
-                //lbQ.Text = q["pre"].ToString() + q["qid"].ToString();
-                //client.WriteLineAndGetReply(data, TimeSpan.FromSeconds(3));
+                //string replyMessage = "OK"; //This is the reply message
+                // e.ReplyLine(replyMessage);
             }
+
 
             txtStatus.Invoke((MethodInvoker)delegate ()
             {
                 txtStatus.Text += e.MessageString;
-               // e.ReplyLine(string.Format("You said: {0}", e.MessageString));
             });
         }
 
@@ -146,8 +138,8 @@ namespace mssDashboard
             //_q.addQueue("C3", "3", "http://10.91.1.200:3000/personImage/T25.png");
 
 
-            var dt = DateTime.Parse("2020-12-15T06:33:48.224Z");
-            Console.WriteLine(dt);
+            //var dt = DateTime.Parse("2020-12-15T06:33:48.224Z");
+            //Console.WriteLine(dt);
 
             countQueue();
 

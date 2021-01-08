@@ -29,13 +29,11 @@ namespace mssDashboard.control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pnQ1 = new System.Windows.Forms.Panel();
             this.lbCounter = new System.Windows.Forms.Label();
             this.lbTimeleft = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbQ = new System.Windows.Forms.Label();
-            this.tmLeft = new System.Windows.Forms.Timer(this.components);
             this.pnQ1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,12 +101,6 @@ namespace mssDashboard.control
             this.lbQ.Text = "A999";
             this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tmLeft
-            // 
-            this.tmLeft.Enabled = true;
-            this.tmLeft.Interval = 2000;
-            this.tmLeft.Tick += new System.EventHandler(this.tmLeft_Tick);
-            // 
             // ucHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,6 +122,5 @@ namespace mssDashboard.control
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbCounter;
         private System.Windows.Forms.Label lbTimeleft;
-        private System.Windows.Forms.Timer tmLeft;
     }
 }
